@@ -1,0 +1,70 @@
+{
+  "name": "pasok-comment",
+  "version": "1.0.0",
+  "description": "validador de archivos asp",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "luisvilches <lvilches21@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "1.7.9",
+    "electron-builder": "^19.36.0",
+    "electron-packager": "^9.1.0"
+  },
+  "dependencies": {
+    "filehound": "^1.16.2"
+  },
+  "build": {
+    "productName": "Pasok",
+    "appId": "cl.pasok.app",
+    "asar": true,
+    "files": [],
+    "mac": {
+      "category": "pasok.app.category.development",
+      "icon": "build/icon.icns"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "category": "Development",
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm",
+        "freebsd",
+        "pacman",
+        "snap",
+        "p5p",
+        "apk",
+        "7z",
+        "zip",
+        "tar.xz",
+        "tar.lz",
+        "tar.gz",
+        "tar.bz2"
+      ],
+      "icon": "build/background.png"
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
+  }
+}
